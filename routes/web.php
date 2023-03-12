@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index'])->name('shop-index');
+Route::get('/shop', [\App\Http\Controllers\Shop::class, 'index'])->name('shop-index');
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog-index');
 
@@ -31,3 +31,11 @@ Route::put('/admin/{post}', [\App\Http\Controllers\AdminController::class, 'upda
 Route::delete('/admin/{post}', [\App\Http\Controllers\AdminController::class, 'destroy'])->middleware('auth')->name('admin.destroy');
 
 Route::post('/vixod', [\App\Http\Controllers\AdminController::class, 'vixod'])->middleware('auth')->name('vixod');
+
+Route::get('/admin/shop', [\App\Http\Controllers\ShopController::class, 'index'])->middleware('auth')->name('shop.index');
+Route::get('/admin/shop/create', [\App\Http\Controllers\ShopController::class, 'create'])->middleware('auth')->name('shop.create');
+Route::post('/admin/shop', [\App\Http\Controllers\ShopController::class, 'store'])->middleware('auth')->name('shop.store');
+Route::get('/admin/shop/{post}/edit', [\App\Http\Controllers\ShopController::class, 'edit'])->middleware('auth')->name('shop.edit');
+Route::put('/admin/shop/{post}', [\App\Http\Controllers\ShopController::class, 'update'])->middleware('auth')->name('shop.update');
+Route::delete('/admin/shop/{post}', [\App\Http\Controllers\ShopController::class, 'destroy'])->middleware('auth')->name('shop.destroy');
+

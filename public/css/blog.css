@@ -6,25 +6,25 @@
     display: flex;
     align-items: center;
   }
-  
+
   .hero-inner {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
   }
-  
+
   .hero-title {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .hero-button {
     display: inline-block;
     padding: 1rem 2rem;
@@ -36,9 +36,35 @@
     color: #000;
     transition: all 0.2s ease-in-out;
   }
-  
+
   .hero-button:hover {
     background-color: #000;
     color: #fff;
   }
-  
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.pagination li a {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.pagination li.active a {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}

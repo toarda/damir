@@ -17,7 +17,7 @@
     <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Bootstrap Shop</a>
+        <a class="navbar-brand" href="{{ route('index') }}">Shop</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -51,140 +51,22 @@
     <section class="hero bg-light">
       <div class="container">
         <div class="row align-items-center">
+            @foreach($products as $product)
           <div class="col-md-6">
-            <h1>Welcome to our shop</h1>
+            <h1>{{ $product->name }}</h1>
             <p class="lead">
-              Find the latest trends and best deals on our website.
+                {{ $product->description }}
             </p>
             <a href="#" class="btn btn-primary">Shop now</a>
           </div>
           <div class="col-md-6">
-            <img src="path/to/image.jpg" alt="Shop image" class="img-fluid" />
+            <img src="{{ $product->image }}" alt="Shop image" class="img-fluid" />
           </div>
+            @endforeach
         </div>
       </div>
     </section>
 
-    <section class="products">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 1</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 2</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 3</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 4</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 5</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="path/to/image.jpg"
-                alt="Product image"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product 6</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum eget felis euismod, tristique augue id, aliquet
-                  enim. Donec fringilla, sapien nec elementum faucibus, nibh
-                  quam luctus massa, eu ultricies felis felis a nisl.
-                </p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
