@@ -83,14 +83,13 @@
                         <p class="card-text">
                             {{ $post->content }}
                         </p>
-                        <a href="#" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        {!! $posts->links() !!}
+        {!! $posts->links(('vendor.pagination.default')) !!}
     </div>
 </div>
 

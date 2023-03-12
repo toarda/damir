@@ -20,6 +20,9 @@ Route::get('/shop', [\App\Http\Controllers\Shop::class, 'index'])->name('shop-in
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog-index');
 
+//Route::get('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'create'])->middleware('guest')->name('login');
+//Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'store'])->middleware('guest');
+
 Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'authenticate'])->middleware('guest');
 

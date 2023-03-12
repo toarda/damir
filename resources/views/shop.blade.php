@@ -10,6 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/shop.css') }}" />
   </head>
@@ -57,7 +58,7 @@
             <p class="lead">
                 {{ $product->description }}
             </p>
-            <a href="#" class="btn btn-primary">Shop now</a>
+              <a href="https://wa.me/87078627777?text=Здравствуйте! Пишу по поводу товара: {{ $product->name }} | Цена: {{ $product->price }}">Купить</a>
           </div>
           <div class="col-md-6">
             <img src="{{ $product->image }}" alt="Shop image" class="img-fluid" />
@@ -68,6 +69,8 @@
     </section>
 
 
+
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -75,6 +78,7 @@
           Copyright &copy;
           <script>
             document.write(new Date().getFullYear());
+
           </script>
           Company Name
         </p>
@@ -82,7 +86,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('https://code.jquery.com/jquery-3.5.1.slim.min.js') }}"></script>
+
+    <script src="{{ asset('https://code.jquery.com/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/shop.js') }}"></script>

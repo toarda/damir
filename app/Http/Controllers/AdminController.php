@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function index(){
+
         $posts = Post::all();
         return view('admin.index', compact('posts'));
     }
@@ -37,6 +38,7 @@ class AdminController extends Controller
 
     public function update(Request $request, Post $post)
     {
+
         $post->title = $request->title;
         $post->content = $request->content;
         $post->image = $request->image;
